@@ -12,6 +12,8 @@ group.add_argument('--wifi', action='store_true',
                     help='Setup wifi again(execute as sudo)')
 group.add_argument('--audio', action='store_true',
                     help='Provide information about audio controls')
+group.add_argument('--power', action='store_true',
+                    help='Provide information about power information')
 
 args = parser.parse_args()
 
@@ -49,3 +51,7 @@ elif args.wifi:
 elif args.audio:
     print('Open pavucontrol for volumcontrol gui')
     print('Alsamixer for tui with audiocontrols')
+elif args.audio:
+    print('Status and system information: sudo tlp-stat -s')
+    print('View configuration: sudo tlp-stat -c')
+    print('View Battery report: sudo tlp-stat -b')
