@@ -60,3 +60,4 @@ elif args.display:
     print('Duplicate screen to HDMI: xrandr --output HDMI-A-0 --auto --same-as eDP')
     print('Extend screen on HDMI: xrandr --output HDMI-A-0 --auto --right-of eDP')
     print('List all outputs: xrandr')
+    print('Duplicate screen and adjust size to HDMI: xrandr --output eDP --primary --auto --output HDMI-A-0 --auto --same-as eDP')
